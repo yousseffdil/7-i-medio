@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.player,
+.computer,
+.result {
+    flex-basis: 33%;
+    min-width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px #ccc;
+}
+
+.player {
+    order: 1;
+}
+
+.computer {
+    order: 3;
+}
+
+.result {
+    order: 2;
+}
+
+#player-cards,
+#computer-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 70px;
+    height: 100px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card.red {
+    color: #f00;
+}
+
+.card.black {
+    color: #000;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+button:hover {
+    background-color: #0069d9;
+}
+
+button:active {
+    box-shadow: none;
+}
+
+#result {
+    font-size: 24px;
+    text-align: center;
+    margin: 10px;
+}
