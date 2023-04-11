@@ -23,6 +23,7 @@ hitButton.addEventListener('click', () => {
     game.hit(player);
     renderGame();
 });
+// el que llegeixi aquesta part del codi es gei
 
 standButton.addEventListener('click', () => {
     disableHitStandButtons();
@@ -38,7 +39,10 @@ function renderGame() {
     for (let card of player.cards) {
         playerCards.innerHTML += card.getHTML();
     }
-
+    if (player.score > 7.5) {
+        alert("Mi homie te has pasado")
+        disableHitStandButtons();
+    }
     const playerScore = document.getElementById('player-score');
     playerScore.textContent = player.score;
 

@@ -14,14 +14,8 @@ export default class Player {
     let score = 0;
     let aces = 0;
     for (let card of this.cards) {
-      if (card.rank === 'As') {
-        aces++;
-        score += 1;
-      } else if (card.rank === 'Sota' || card.rank === 'Caballo' || card.rank === 'Rey') {
-        score += 0.5;
-      } else {
-        score += (card.rank);
-      }
+      score += (card.rank.value);
+
     }
     while (aces > 0 && score < 7.5) {
       score += 0.5;
@@ -29,7 +23,7 @@ export default class Player {
     }
     return score;
   }
-  
+
 
   reset() {
     this.cards = [];
@@ -37,4 +31,3 @@ export default class Player {
   }
 }
 
-export { Player };

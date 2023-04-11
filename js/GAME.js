@@ -7,7 +7,7 @@ class Game {
     this.player = player;
     this.computer = computer;
   }
-  
+
   start() {
     this.deck.shuffle();
     this.player.reset();
@@ -17,18 +17,18 @@ class Game {
       this.computer.addCard(this.deck.pop());
     }
   }
-  
+
   hit(player) {
     player.addCard(this.deck.pop());
   }
-  
+
   computerTurn() {
     while (this.computer.score < 7.5 && this.computer.cards.length < 5) {
-      if (this.computer.score < 5.5) {
+      if (this.computer.score < 7.5) {
         this.hit(this.computer);
-      } else if (this.computer.score >= 5.5 && this.computer.score < 7.5 && this.computer.cards.length === 2) {
+      } else if (this.computer.score >= 7.5 && this.computer.score < 7.5 && this.computer.cards.length === 2) {
         this.hit(this.computer);
-      } else if (this.computer.score >= 5.5 && this.computer.score < 7.5) {
+      } else if (this.computer.score >= 7.5 && this.computer.score < 7.5) {
         const randomNumber = Math.random();
         if (randomNumber < 0.5) {
           this.hit(this.computer);
@@ -40,8 +40,8 @@ class Game {
       }
     }
   }
-  
-  
+
+
   getResult() {
     if (this.player.score > 7.5) {
       return 'El jugador pierde';
