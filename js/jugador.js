@@ -1,4 +1,4 @@
-export default class Player {
+class Player {
   constructor(name) {
     this.name = name;
     this.cards = [];
@@ -30,4 +30,4 @@ export default class Player {
     this.score = 0;
   }
 }
-
+export { Player }

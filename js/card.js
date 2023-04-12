@@ -7,7 +7,7 @@ class Card {
   }
 
   getHTML() {
-    return `<div class="card  ${this.suit} animate__animated animate__pulse">
+    return `<div class="card  ${this.suit} animate__animated animate__fadeIn">
       ${this.suit}  
       ${this.rank.name}
         <div class="suit-icon"></div>
