@@ -1,11 +1,21 @@
 import { Deck } from './deck.js';
 import { Player } from './jugador.js';
 import { Game } from './GAME.js';
+import {
+    getStartButton,
+    getHitButton,
+    getStandButton,
+    getResultDiv,
+    getPlayerCards,
+    getPlayerScore,
+    getComputerCards,
+    getComputerScore
+} from './vista.js';
 
-const startButton = document.getElementById('start');
-const hitButton = document.getElementById('hit');
-const standButton = document.getElementById('stand');
-const resultDiv = document.getElementById('result');
+const startButton = getStartButton();
+const hitButton = getHitButton();
+const standButton = getStandButton();
+const resultDiv = getResultDiv();
 
 const deck = new Deck();
 const player = new Player();
@@ -22,8 +32,8 @@ startButton.addEventListener('click', () => {
 hitButton.addEventListener('click', () => {
     game.hit(player);
     renderGame();
+    game.hit();
 });
-// el que llegeixi aquesta part del codi es gei
 
 standButton.addEventListener('click', () => {
     disableHitStandButtons();
@@ -34,52 +44,55 @@ standButton.addEventListener('click', () => {
 
 
 function renderGame() {
-    const playerCards = document.getElementById('player-cards');
+    const playerCards = getPlayerCards();
     playerCards.innerHTML = '';
     for (let card of player.cards) {
         playerCards.innerHTML += card.getHTML();
     }
-    if (player.score > 7.5) {
-        alert("Mi homie te has pasado")
-        disableHitStandButtons();
-    }
-    const playerScore = document.getElementById('player-score');
+    const playerScore = getPlayerScore();
     playerScore.textContent = player.score;
 
-    const computerCards = document.getElementById('computer-cards');
+    const computerCards = getComputerCards();
     computerCards.innerHTML = '';
     for (let card of computer.cards) {
         computerCards.innerHTML += card.getHTML();
     }
 
-    const computerScore = document.getElementById('computer-score');
-    computerScore.textContent = computer.cards.length === 2 ? '??' : computer.score;
+    const computerScore = getComputerScore();
+    computerScore.textContent = computer.cards.length === 2 ? computer.score : computer.score;
 }
 
 function renderResult() {
-    const result = game.getResult();
+    const result = game.getResult().value;
     resultDiv.textContent = result;
 }
 
 function disableHitStandButtons() {
     hitButton.disabled = true;
+    hitButton.style.backgroundColor = "grey"
     standButton.disabled = true;
+    standButton.style.backgroundColor = "grey"
+
 }
 
 function enableHitStandButtons() {
     hitButton.disabled = false;
+    hitButton.style.backgroundColor = "#820000"
     standButton.disabled = false;
+    standButton.style.backgroundColor = "#820000"
+
 }
 
 function disableStartButton() {
     startButton.disabled = true;
+    startButton.style.backgroundColor = "grey"
 }
 
 function enableStartButton() {
     startButton.disabled = false;
 }
 
-function reset() {
+function reset(startButton) {
     deck.shuffle();
     player.reset();
     computer.reset();

@@ -1,18 +1,17 @@
-
 class Card {
-  constructor(suit, rank) {
+  constructor(suit, rank, icon) {
     this.suit = suit;
     this.rank = rank;
-
+    this.icon = icon;
   }
 
   getHTML() {
-    return `<div class="card  ${this.suit} animate__animated animate__fadeIn">
-      ${this.suit}  
-      ${this.rank.name}
-        <div class="suit-icon"></div>
-      </div>`;
-
+    return `
+      <div class="card ${this.suit} animate_animated animate__bounceIn">
+      <i class="fa-solid ${this.icon}"></i>
+      <p>${this.rank.name}</p>
+    </div>
+    `
   }
 }
 

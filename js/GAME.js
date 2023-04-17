@@ -1,8 +1,7 @@
 import { Deck } from './deck.js';
 import { Player } from './jugador.js';
-
 class Game {
-  constructor(deck, player, computer) {
+  constructor(deck, player, computer, Main) {
     this.deck = deck;
     this.player = player;
     this.computer = computer;
@@ -17,6 +16,7 @@ class Game {
       this.computer.addCard(this.deck.pop());
     }
   }
+
 
   hit(player) {
     player.addCard(this.deck.pop());
@@ -44,15 +44,35 @@ class Game {
 
   getResult() {
     if (this.player.score > 7.5) {
-      return 'El jugador pierde';
+
+      const text = "El jugador pierde"
+      Swal.fire(text)
+      return { value: text };
+
     } else if (this.computer.score > 7.5) {
-      return 'El jugador gana';
+
+      const text = "El jugador gana"
+      Swal.fire(text)
+      return { value: text };
+
     } else if (this.player.score > this.computer.score) {
-      return 'El jugador gana';
+
+      const text = "El jugador gana"
+      Swal.fire(text)
+      return { value: text };
+
     } else if (this.player.score < this.computer.score) {
-      return 'El jugador pierde';
+
+      const text = "El jugador pierde"
+      Swal.fire(text)
+      return { value: text };
+
     } else {
-      return 'Empate';
+
+      const text = "EMPATE"
+      Swal.fire(text)
+      return { value: text };
+
     }
   }
 }

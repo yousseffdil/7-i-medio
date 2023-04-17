@@ -1,36 +1,47 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-image: url("/source/background.jpg");
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    color: white;
 }
 
 h1,
-h2 {
+h2,
+h3 {
     text-align: center;
 }
 
 .container {
     display: flex;
+    margin-top: 2%;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px;
+    width: 100%;
+
+
+    background: rgba(75, 52, 65, 0.15);
+    box-shadow: 0 4px 30px rgba(75, 52, 65, 0.1);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+
+
 }
 
 .player,
 .computer,
 .result {
-    flex-basis: 33%;
-    min-width: 300px;
+    width: 50%;
     margin: 10px;
     padding: 10px;
-    background-color: #fff;
-    box-shadow: 3px 3px 3px #ccc;
+    background-color: #000000a4;
 }
 
 .player {
-    order: 1;
+    order: 2;
 }
 
 .computer {
@@ -38,7 +49,7 @@ h2 {
 }
 
 .result {
-    order: 2;
+    order: 1;
 }
 
 #player-cards,
@@ -50,27 +61,21 @@ h2 {
 }
 
 .card {
-    text-align: center;
+    color: white;
+    border-radius: 10px;
     width: 100px;
     height: 150px;
     margin: 5px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    box-shadow: 1px 1px 1px #ccc;
+    background: rgb(244, 63, 34);
+    background: linear-gradient(115deg, rgba(244, 63, 34, 1) 0%, rgba(214, 55, 75, 1) 100%);
+    padding: 1%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     font-size: 15px;
     font-weight: bold;
 }
 
-.card.red {
-    color: #f00;
-}
-
-.card.black {
-    color: #000;
-}
 
 .button-container {
     display: flex;
@@ -84,14 +89,15 @@ button {
     margin: 5px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #820000;
     color: #fff;
     cursor: pointer;
-    box-shadow: 1px 1px 1px #ccc;
+    outline: none;
+    transition: 500ms;
 }
 
 button:hover {
-    background-color: #0069d9;
+    background-color: #820000;
 }
 
 button:active {

@@ -3,7 +3,12 @@ import { Card } from './card.js';
 class Deck {
   constructor() {
     this.cards = [];
-    const suits = ['Oros', 'Copas', 'Espadas', 'Bastos'];
+    const suits = [
+      { name: 'Oros', icon: 'fa-coins' },
+      { name: 'Copas', icon: 'fa-glass-martini-alt' },
+      { name: 'Espadas', icon: 'fa-utensils' },
+      { name: 'Bastos', icon: 'fa-pause' }
+    ];
 
     const ranks = [
       { name: 'As', value: 1 },
@@ -20,19 +25,20 @@ class Deck {
 
     for (let suit of suits) {
       for (let rank of ranks) {
-        this.cards.push(new Card(suit, rank));
+        this.cards.push(new Card(suit.name, rank, suit.icon));
       }
     }
   }
-  
+
+
   pop() {
     return this.cards.pop();
   }
-  
+
   push(card) {
     this.cards.push(card);
   }
-  
+
   shuffle() {
     for (let i = this.cards.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));

@@ -6,13 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <!-- SWEET ALERT 2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- ANIMATE CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <title>Document</title>
+  <!--  FONT AWESOME CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CONFETI -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"></script>
+
+  <title>Siet y medio</title>
 </head>
 
 <body>
-  <h1>Siete y medio</h1>
   <div class="container">
+
+    <div class="result">
+      <h3>Clica empezar para empezar</h3>
+      <h1 id="result"></h1>
+      <button id="start">Empezar</button>
+    </div>
     <div class="player">
       <h2>Tu</h2>
       <div id="player-cards"></div>
@@ -25,11 +42,7 @@
       <div id="computer-cards"></div>
       <p>Puntuación: <span id="computer-score"></span></p>
     </div>
-    <div class="result">
-      <h3>Clica empezar para empezar</h3>
-      <h1 id="result"></h1>
-      <button id="start">Empezar</button>
-    </div>
+
   </div>
   <script type="module" src="js/main.js"></script>
 </body>
