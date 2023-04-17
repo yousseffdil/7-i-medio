@@ -1,12 +1,12 @@
-import { Deck } from './deck.js';
-import { Player } from './jugador.js';
+/**
+ * Es representa una classe anomenada Game.
+ * */
 class Game {
   constructor(deck, player, computer, Main) {
     this.deck = deck;
     this.player = player;
     this.computer = computer;
   }
-
   start() {
     this.deck.shuffle();
     this.player.reset();
@@ -44,37 +44,27 @@ class Game {
 
   getResult() {
     if (this.player.score > 7.5) {
-
-      const text = "El jugador pierde"
-      Swal.fire(text)
-      return { value: text };
-
+      const text = 'El jugador pierde';
+      Swal.fire(text);
+      return {value: text};
     } else if (this.computer.score > 7.5) {
-
-      const text = "El jugador gana"
-      Swal.fire(text)
-      return { value: text };
-
+      const text = 'El jugador gana';
+      Swal.fire(text);
+      return {value: text};
     } else if (this.player.score > this.computer.score) {
-
-      const text = "El jugador gana"
-      Swal.fire(text)
-      return { value: text };
-
+      const text = 'El jugador gana';
+      Swal.fire(text);
+      return {value: text};
     } else if (this.player.score < this.computer.score) {
-
-      const text = "El jugador pierde"
-      Swal.fire(text)
-      return { value: text };
-
+      const text = 'El jugador pierde';
+      Swal.fire(text);
+      return {value: text};
     } else {
-
-      const text = "EMPATE"
-      Swal.fire(text)
-      return { value: text };
-
+      const text = 'EMPATE';
+      Swal.fire(text);
+      return {value: text};
     }
   }
 }
 
-export { Game };
+export {Game};
