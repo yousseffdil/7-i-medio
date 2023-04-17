@@ -1,3 +1,4 @@
+
 /**
  * Una classe que representa la vista del joc
  * */
@@ -71,22 +72,26 @@ export class Vista {
    * */
   renderResult() {
     const result = this.game.getResult();
-    this.resultDiv.textContent = result;
+    this.resultDiv.textContent = result.value;
   }
 
   /**
-   * Desactuva el boto 'hit' i 'stand'.
+   * Desactiva el boto 'hit' i 'stand'.
    * */
   disableHitStandButtons() {
     this.hitButton.disabled = true;
+    this.hitButton.style.backgroundColor = '#808080';
     this.standButton.disabled = true;
+    this.standButton.style.backgroundColor = '#808080';
   }
   /**
    * Activa el boto 'hit' i 'stand'.
    * */
   enableHitStandButtons() {
     this.hitButton.disabled = false;
+    this.hitButton.style.backgroundColor = '#820000';
     this.standButton.disabled = false;
+    this.standButton.style.backgroundColor = '#820000';
   }
   /**
    * Activa el boto 'start'.
