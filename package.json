@@ -1,6 +1,7 @@
 {
   "name": "7-i-medio",
   "version": "1.0.0",
+  "type": "module",
   "devDependencies": {
     "eslint": "^8.38.0",
     "eslint-config-google": "^0.14.0",
