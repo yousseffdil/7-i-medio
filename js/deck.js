@@ -51,9 +51,9 @@ class Deck {
   }
 
   /**
-   * Afagueix una carta al final de la baralla.
+   * Afegeix una carta al final de la baralla.
    *
-   * @param {Object} card - La carta a afaguir.
+   * @param {Object} card - La carta a afegir.
    */
   push(card) {
     this.cards.push(card);

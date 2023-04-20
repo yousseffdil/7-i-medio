@@ -1,6 +1,6 @@
 import {Deck} from './deck.js';
 import {Jugador} from './jugador.js';
-import {Game} from './game.js';
+import {Game} from './Game.js';
 import {Vista} from './vista.js';
 
 const deck = new Deck();
