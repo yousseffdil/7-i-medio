@@ -1,4 +1,5 @@
-
+// Activar per poder fer el testing
+// import Swal from 'sweetalert2';
 
 /**
  * Representa una classe anomenada Game.
