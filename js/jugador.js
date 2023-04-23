@@ -28,17 +28,12 @@ class Jugador {
    */
   getScore() {
     let score = 0;
-    let aces = 0;
     for (const card of this.cards) {
       score += (card.rank.value);
     }
-    while (aces > 0 && score < 7.5) {
-      score += 0.5;
-      aces--;
-    }
+
     return score;
   }
-
   /**
    * Reinicia la mà i la puntuació del jugador a buides i zero respectivament.
    */

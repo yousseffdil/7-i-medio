@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2';
+
 /**
  * Representa una classe anomenada Game.
  * @class
@@ -69,10 +71,6 @@ class Game {
   getResult() {
     if (this.player.score > 7.5) {
       const text = 'El jugador pierde';
-      Swal.fire(text);
-      return {value: text};
-    } else if (this.computer.score > 7.5) {
-      const text = 'El jugador gana';
       Swal.fire(text);
       return {value: text};
     } else if (this.player.score > this.computer.score) {
