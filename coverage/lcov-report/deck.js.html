@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">91.66% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/12</span>
+                <span class='fraction'>0/12</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90.9% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/11</span>
+                <span class='fraction'>0/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -151,30 +151,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">28x</span>
-<span class="cline-any cline-yes">280x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -186,7 +171,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -203,9 +194,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">39x</span>
-<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -224,16 +224,16 @@ class Deck {
    * @property {string} name - El nombre del palo.
    * @property {string} icon - El icono asociado al palo.
    */
-  constructor() {
-    this.cards = [];
-    const suits = [
+<span class="fstat-no" title="function not covered" >  co</span>nstructor() {
+<span class="cstat-no" title="statement not covered" >    this.cards = [];</span>
+    const suits = <span class="cstat-no" title="statement not covered" >[</span>
       {name: 'Oros', icon: 'fa-coins'},
       {name: 'Copas', icon: 'fa-glass-martini-alt'},
       {name: 'Espadas', icon: 'fa-utensils'},
       {name: 'Bastos', icon: 'fa-pause'},
     ];
 &nbsp;
-    const ranks = [
+    const ranks = <span class="cstat-no" title="statement not covered" >[</span>
       {name: 'As', value: 1},
       {name: 'Dos', value: 2},
       {name: 'Tres', value: 3},
@@ -246,9 +246,9 @@ class Deck {
       {name: 'Rey', value: 0.5},
     ];
 &nbsp;
-    for (const suit of suits) {
-      for (const rank of ranks) {
-        this.cards.push(new Card(suit.name, rank, suit.icon));
+<span class="cstat-no" title="statement not covered" >    for (const suit of suits) {</span>
+<span class="cstat-no" title="statement not covered" >      for (const rank of ranks) {</span>
+<span class="cstat-no" title="statement not covered" >        this.cards.push(new Card(suit.name, rank, suit.icon));</span>
       }
     }
   }
@@ -259,8 +259,8 @@ class Deck {
    *
    * @return {Object} Retorna la ultima carta de la baralla.
    */
-  pop() {
-    return this.cards.pop();
+<span class="fstat-no" title="function not covered" >  po</span>p() {
+<span class="cstat-no" title="statement not covered" >    return this.cards.pop();</span>
   }
 &nbsp;
   /**
@@ -276,10 +276,10 @@ class Deck {
   /**
    * Un metode que el que fa es barrejar las cartas amb el metode Math.random.
    */
-  shuffle() {
-    for (let i = this.cards.length - 1; i &gt; 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]];
+<span class="fstat-no" title="function not covered" >  sh</span>uffle() {
+<span class="cstat-no" title="statement not covered" >    for (let i = <span class="cstat-no" title="statement not covered" >this.cards.length - 1;</span> i &gt; 0; i--) {</span>
+      const j = <span class="cstat-no" title="statement not covered" >Math.floor(Math.random() * (i + 1));</span>
+<span class="cstat-no" title="statement not covered" >      [this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]];</span>
     }
   }
 }
@@ -292,7 +292,7 @@ export {Deck};
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-04-23T00:35:09.119Z
+                at 2023-04-24T09:15:12.936Z
             </div>
         <script src="prettify.js"></script>
         <script>

@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>0/11</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>0/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -118,9 +118,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -128,8 +128,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
-<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -138,19 +138,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
-<span class="cline-any cline-yes">21x</span>
-<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -163,19 +163,19 @@ class Jugador {
    * Crea un objecte Jugador amb el nom donat.
    * @param {string} name - El nom del jugador.
    */
-  constructor(name) {
-    this.name = name;
-    this.cards = [];
-    this.score = 0;
+<span class="fstat-no" title="function not covered" >  co</span>nstructor(name) {
+<span class="cstat-no" title="statement not covered" >    this.name = name;</span>
+<span class="cstat-no" title="statement not covered" >    this.cards = [];</span>
+<span class="cstat-no" title="statement not covered" >    this.score = 0;</span>
   }
 &nbsp;
   /**
    * Afegeix una carta a la mà del jugador i actualitza la seva puntuació.
    * @param {object} card - L'objecte carta a afegir a la mà del jugador.
    */
-  addCard(card) {
-    this.cards.push(card);
-    this.score = this.getScore();
+<span class="fstat-no" title="function not covered" >  ad</span>dCard(card) {
+<span class="cstat-no" title="statement not covered" >    this.cards.push(card);</span>
+<span class="cstat-no" title="statement not covered" >    this.score = this.getScore();</span>
   }
 &nbsp;
   /**
@@ -183,20 +183,20 @@ class Jugador {
    * Els asos valen 1 o 11 punts.
    * @return {number} - La puntuació actual del jugador.
    */
-  getScore() {
-    let score = 0;
-    for (const card of this.cards) {
-      score += (card.rank.value);
+<span class="fstat-no" title="function not covered" >  ge</span>tScore() {
+    let score = <span class="cstat-no" title="statement not covered" >0;</span>
+<span class="cstat-no" title="statement not covered" >    for (const card of this.cards) {</span>
+<span class="cstat-no" title="statement not covered" >      score += (card.rank.value);</span>
     }
 &nbsp;
-    return score;
+<span class="cstat-no" title="statement not covered" >    return score;</span>
   }
   /**
    * Reinicia la mà i la puntuació del jugador a buides i zero respectivament.
    */
-  reset() {
-    this.cards = [];
-    this.score = 0;
+<span class="fstat-no" title="function not covered" >  re</span>set() {
+<span class="cstat-no" title="statement not covered" >    this.cards = [];</span>
+<span class="cstat-no" title="statement not covered" >    this.score = 0;</span>
   }
 }
 &nbsp;
@@ -208,7 +208,7 @@ export {Jugador};
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-04-23T00:35:09.119Z
+                at 2023-04-24T09:15:12.936Z
             </div>
         <script src="prettify.js"></script>
         <script>

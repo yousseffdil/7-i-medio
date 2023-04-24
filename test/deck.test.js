@@ -8,6 +8,16 @@ describe('Deck Unit test', () => {
     const card2 = deck.pop();
     expect(card).toBe(card2);
   });
+  test('Push test', () => {
+    const deck = new Deck();
+    const card1 = new Card('Oros', {name: 'As', value: 1});
+    const card2 = new Card('Espadas', {name: 'As', value: 1});
+    deck.push(card1);
+    deck.push(card2);
+    expect(deck.cards[deck.cards.length-1]).toBe(card2);
+  });
+
+
   test('Shuffle unit test', () => {
     const deck = new Deck();
     const originalDeck = [...deck.cards];

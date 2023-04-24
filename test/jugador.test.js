@@ -1,4 +1,5 @@
 import {Jugador} from '../js/jugador.js';
+import {Card} from '../js/card';
 describe('Jugador', () => {
   let jugador = new Jugador();
   beforeEach(() => {
@@ -11,11 +12,12 @@ describe('Jugador', () => {
     expect(jugador.score).toBe(0);
   });
   test('getScore', () => {
-    jugador.addCard({rank: 'As', suit: 'Espadas', value: 1});
-    jugador.addCard({rank: 'Dos', suit: 'Oros', value: 2});
+    const card = new Card('oros', {name: 'As', value: 1});
+    const card2 = new Card('oros', {name: 'Dos', value: 2} );
+    jugador.addCard(card);
+    jugador.addCard(card2);
 
     expect(jugador.cards).toHaveLength(2);
-
     expect(jugador.getScore()).toBe(3);
   });
 });

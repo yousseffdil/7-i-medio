@@ -1,4 +1,3 @@
-
 /**
  * Una classe que representa la vista del joc
  * */
@@ -72,6 +71,7 @@ export class Vista {
    * */
   renderResult() {
     const result = this.game.getResult();
+    Swal.fire(result.value);
     this.resultDiv.textContent = result.value;
   }
 
